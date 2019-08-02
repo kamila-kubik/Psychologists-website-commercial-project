@@ -1,0 +1,102 @@
+/*
+source: http://blog.compsoul.pl/liseblog/komunikat-o-plikach-cookies/57.html
+*/
+
+.compsoul-cookies {
+  background: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  bottom: 0;
+  opacity: 0;
+  padding: 0.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+
+.compsoul-cookies p {
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+}
+
+.compsoul-cookies .col-12 {
+  margin-bottom: 0;
+}
+
+.cookies-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compsoul-cookies.active {
+  animation: show linear 0.4s;
+  opacity: 1;
+  z-index: 1;
+}
+
+.compsoul-cookies.hidden-click {
+  animation: hidden linear 0.4s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.compsoul-cookies.hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.compsoul-cookies button {
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: #7aa82b;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+}
+
+.compsoul-cookies button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #7aa82b;
+  border: 1px solid #7aa82b;
+}
+
+.compsoul-cookies a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@keyframes hidden {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    z-index: -1;
+  }
+  1% {
+    opacity: 0;
+    z-index: 1;
+  }
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
